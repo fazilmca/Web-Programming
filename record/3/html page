@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Example</title>
+    <style>
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .internal-paragraph {
+            font-size: 18px;
+            color: #9e2727;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        Welcome to My Web Page
+    </header>
+
+    <section>
+        <h2 style="color: darkblue; text-decoration: underline;">Inline CSS Example</h2>
+        <p style="font-style: italic; color: gray;">This paragraph is styled using inline CSS.</p>
+    </section>
+
+    <section>
+        <h2>Internal CSS Example</h2>
+        <p class="internal-paragraph">This paragraph is styled using internal CSS.</p>
+    </section>
+
+    <section>
+        <h2>External CSS Example</h2>
+        <p class="external-paragraph">This paragraph is styled using external CSS.</p>
+    </section>
+
+</body>
+</html>
