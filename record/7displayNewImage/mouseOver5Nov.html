@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouseover Image and Text Swap</title>
+    <style>
+        img {
+            width: 300px;
+            height: 250px;
+        }
+        #image-container {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #image1 {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        #text1 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="image-container">
+    <h1><center>ROLLS ROYCE</center></h1>
+        <img src="phantom.jpeg" id="image1">
+        <p id="text1">Front View</p>
+    </div>
+
+    <script>
+        const imageContainer = document.getElementById('image-container');
+        const image1 = document.getElementById('image1');
+        const text1 = document.getElementById('text1');
+
+        imageContainer.addEventListener('mouseover', () => {
+            image1.src = "phantom2.jpeg";
+            text1.textContent = "Side View";
+        });
+
+        imageContainer.addEventListener('mouseout', () => {
+            image1.src = "phantom.jpeg";
+            text1.textContent = "Front View";
+        });
+    </script>
+</body>
+</html>
