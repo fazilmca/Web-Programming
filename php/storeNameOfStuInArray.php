@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Student Names</title>
     <style>
@@ -8,7 +8,7 @@
             margin: 20px;
         }
         pre {
-            background-color: #f4f4f4;
+            background-color: #3e85a8;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
