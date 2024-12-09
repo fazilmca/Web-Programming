@@ -18,7 +18,6 @@
             padding: 8px 12px;
             text-align: center;
         }
-
         th {
             background-color: #f5eccb;
         }
@@ -32,6 +31,7 @@
     <table>
         <thead>
             <tr>
+                <th>S.No</th>
                 <th>Player Name</th>
             </tr>
         </thead>
@@ -43,10 +43,16 @@
                 "Hardik Pandya",
                 "Jasprit Bumrah",
                 "Rishabh Pant",
+                "M.S. Dhoni", 
+                "Sachin Tendulkar",
+                "Saurav Ganguly",
+                "Rahul Dravid",
+                "Kapil Dev",
             );
-
+            $serial_num = 1;                
             foreach ($players as $player) {
-                echo "<tr><td>$player</td></tr>";
+                echo "<tr><td>$serial_num</td><td>$player</td></tr>";
+                $serial_num++;
             }
             ?>
         </tbody>
