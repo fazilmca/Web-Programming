@@ -28,9 +28,9 @@
 <body>
     
     <div id="image-container">
-    <h1><center>ROLLS ROYCE</center></h1>
-        <img src="phantom.jpeg" id="image1">
-        <p id="text1">Front View</p>
+        <h1><center>PORSCHE</center></h1>
+        <img src="frontgt3.jpg" id="image1">
+        <p id="text1">Front Profile</p>
     </div>
 
     <script>
@@ -39,13 +39,13 @@
         const text1 = document.getElementById('text1');
 
         imageContainer.addEventListener('mouseover', () => {
-            image1.src = "phantom2.jpeg";
-            text1.textContent = "Side View";
+            image1.src = "sidegt3.jpg";
+            text1.textContent = "Side Profile";
         });
 
         imageContainer.addEventListener('mouseout', () => {
-            image1.src = "phantom.jpeg";
-            text1.textContent = "Front View";
+            image1.src = "frontgt3.jpg";
+            text1.textContent = "Front Profile";
         });
     </script>
 </body>
