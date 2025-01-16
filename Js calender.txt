@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calendar</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+    .calendar { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+    .month { border: 1px solid #000; margin: 10px; padding: 10px; width: 200px; }
+    .days { display: grid; grid-template-columns: repeat(7, 1fr); font-size: 12px; text-align: center; }
+    .day-header { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Simple Calendar</h1>
+  <input type="number" id="year" placeholder="Enter Year" min="1900" max="2100">
+  <button onclick="createCalendar()">Show Calendar</button>
+  <div class="calendar" id="calendar"></div>
+
+  <script>
+    function createCalendar() {
+      const year = document.getElementById("year").value;
+      
+
+      const calendar = document.getElementById("calendar");
+      calendar.innerHTML = ""; // Clear existing calendar
+      const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+      for (let i = 0; i < 12; i++) {
+        const monthDiv = document.createElement("div");
+        monthDiv.className = "month";
+        monthDiv.innerHTML = `<h3>${months[i]} ${year}</h3>`;
+
+        const daysDiv = document.createElement("div");
+        daysDiv.className = "days";
+
+        days.forEach(day => {
+          const dayHeader = document.createElement("div");
+          dayHeader.className = "day-header";
+          dayHeader.textContent = day;
+          daysDiv.appendChild(dayHeader);
+        });
+
+        const firstDay = new Date(year, i, 1).getDay();
+        const totalDays = new Date(year, i + 1, 0).getDate();
+
+        for (let j = 0; j < firstDay; j++) {
+          daysDiv.appendChild(document.createElement("div"));
+        }
+
+        for (let d = 1; d <= totalDays; d++) {
+          const dayCell = document.createElement("div");
+          dayCell.textContent = d;
+          daysDiv.appendChild(dayCell);
+        }
+
+        monthDiv.appendChild(daysDiv);
+        calendar.appendChild(monthDiv);
+      }
+    }
+  </script>
+</body>
+</html>
